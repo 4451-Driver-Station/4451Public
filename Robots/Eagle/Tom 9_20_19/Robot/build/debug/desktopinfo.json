@@ -1,0 +1,9 @@
+[
+  {
+    "name": "Robot",
+    "file": "/4451/robot/Robot/build/libs/Robot.jar",
+    "extensions": [],
+    "librarydir": "/4451/robot/Robot/build/tmp/jniExtractDir",
+    "mainclass": "frc.robot.Main"
+  }
+]

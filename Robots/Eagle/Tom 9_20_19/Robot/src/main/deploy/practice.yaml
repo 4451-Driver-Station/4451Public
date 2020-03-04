@@ -1,0 +1,103 @@
+ids:
+  motors:
+    leftFront: 0
+    rightFront: 1
+    leftMiddle: 2
+    rightMiddle: 3
+    leftRear: 4
+    rightRear: 5
+    elevator: 6
+    cargoIntake: 7
+    topPlatformFront: 8
+    topPlatformRear: 9
+    topPlatformDrive: 10
+  dio:
+    lidarLeft: 1
+    lidarRight: 0
+    ballLimitSwitch: 5
+  pneumatics:
+    hatchStick: 1
+    scoringMechanism: 2
+    hatchCup1: 3
+    hatchCup2: 4
+  pipelines:
+    # Detects nothing and turns the light off
+    pipelineEmptyID: 2
+    # Detects the target
+    pipelineTargetID: 4
+    # Detects the ball
+    pipelineBallID: 3
+
+pids:
+  elevator:
+    maxSpeed: 2346
+    p: 0.3
+    i: 0.0
+    d: 0.0
+    sensorPhase: false
+    cruiseVelocity: 3200
+    acceleration: 3000
+  forward:
+    left:
+      maxSpeed: 4370
+      p: 0.35
+      i: 0.0
+      d: 0.0
+      sensorPhase: true
+      cruiseVelocity: 6000
+      acceleration: 2000
+    right:
+      maxSpeed: 4250
+      p: 0.1
+      i: 0.0
+      d: 0.0
+      sensorPhase: true
+      cruiseVelocity: 3000
+      acceleration: 2000
+  backward:
+    left:
+      # 4270
+      maxSpeed: 4270 
+      p: 0.35
+      i: 0.00
+      d: 0.0
+      sensorPhase: true
+      cruiseVelocity: 3000
+      acceleration: 2000
+    right:
+      maxSpeed: 4250
+      p: 0.1
+      i: 0.0
+      d: 0.0
+      sensorPhase: true
+      cruiseVelocity: 3000
+      acceleration: 2000
+
+# inverts the pneumatics
+pneumaticInvertations:
+  hatchStick: false
+  scoringMechanism: false
+  hatchCup1: false
+  hatchCup2: false
+
+driveTrain:
+  # the max speed
+  maxRPM: 500
+  # the minimum output value to the motors
+  deadband: 0.3
+  # the speed for the bumpers
+  bumpSpeed: 0.7
+
+lidar:
+  # the lidar must never get into that range. It is used to detect that the lidar is out of range
+  minOffset: 2
+  # the distance between the lidar and the frame of the robot
+  offset: 25
+
+limeDrive:
+  # an offset added to the left lidar distance to make limedrive move faster
+  leftOffset: 22
+  # an offset added to the right lidar distance to make limedrive move faster
+  rightOffset: 22
+  # Determines how aggressivly limedrive turns
+  turnSpeed: 30

@@ -1,0 +1,36 @@
+Forward: 36500
+Reverse: -36800
+
+Max Selected Tickspeed: 36000
+
+(PercentPower(.5) * 1023)/ MaxSelectedTickSpeed
+
+Feed Forward 
+
+Feed Forward Raw Gain Values:
+
+
+-1	-36000
+-.9	-32300
+-.8	-28600
+-.7	-24850
+-.6	-21100
+-.5	-17500
+-.4	-13900
+-.3	-9980
+-.2	-6270
+-.1	-2500
+0	0
+.1	2500
+.2	6140
+.3	9820
+.4	13550
+.5	17450
+.6	20750
+.7	24420
+.8	28050
+.9	31740
+1	35480
+
+Feedforward Gains equation:
+(2061.85 * x^3 - 147.619) + 33891.6 * x
